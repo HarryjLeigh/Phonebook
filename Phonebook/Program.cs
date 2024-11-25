@@ -1,3 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using Phonebook.Views;
 
-Console.WriteLine("Hello, World!");
+UserInterface userInterface = new UserInterface();
+userInterface.Run();
+
