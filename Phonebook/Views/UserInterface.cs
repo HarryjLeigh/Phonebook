@@ -26,19 +26,20 @@ public class UserInterface
             switch (selectedAction)
             {
                 case PhonebookAction.ViewContacts:
-                    PhonebookService.ViewContacts();
-                    Util.AskUserToContinue();
+                    FilterView.Run();
                     break;
                 case PhonebookAction.CreateContact:
                     Contact contactToCreate = ContactExtensions.GetContact();
                     PhonebookService.CreateContact(contactToCreate);
-                    Util.AskUserToContinue();
                     break;
                 case PhonebookAction.UpdateContact:
-                    PhonebookService.UpdateContact();
+                    UpdateView.Run();
                     break;
                 case PhonebookAction.DeleteContact:
                     PhonebookService.DeleteContact();
+                    break;
+                case PhonebookAction.SendEmail:
+                    EmailService.SendEmail();
                     break;
                 case PhonebookAction.Exit:
                     endApp = true;

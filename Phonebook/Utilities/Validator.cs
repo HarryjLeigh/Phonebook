@@ -45,6 +45,15 @@ public static class Validator
         return true;
     }
 
+    internal static bool IsCategoryValid(string input)
+    {
+        if (input.ToLower() == "friends") return true;
+        if (input.ToLower() == "family") return true;
+        if (input.ToLower() == "work") return true;
+
+        return false;
+    }
+
     private static bool HasDigit(string input)
     {
         bool result = false;
@@ -52,7 +61,6 @@ public static class Validator
         {
             if (char.IsDigit(c)) result = true;
         }
-
         return result;
     }
 
